@@ -1,0 +1,1 @@
+Syslog | where Facility in ("auth", "authpriv") | where SyslogMessage has_any ("failed", "FAILED SU") | project TimeGenerated, Computer, SyslogMessage
